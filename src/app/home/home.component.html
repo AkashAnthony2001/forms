@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="content">
+    <form action="" [formGroup]="loginForm">
+            <div class="heading">LOGIN</div>
+            <div class="username text">
+                <input type="text" formControlName="email" placeholder="E-MAIL" class="form-data" [(ngModel)]="username">
+            </div>
+            <div class="password text">
+                <input [type]="changetype?'password':'text'" formControlName="passs" name="pass" placeholder="PASSWORD"  class="form-data" [(ngModel)]="password" >
+            </div>
+            <p class="warn">{{warning}}</p>
+            <div class="pass">
+                <div class="shw-pass box">
+                    <input type="checkbox" [checked]="isChecked" (change)="toggle($event)"> Show Password
+                </div>
+                <div class="for-pass box">
+                    <a routerLink="/forgot">Forgot Password ?</a>
+                </div>
+            </div>            
+            <div class="login">
+                <button class="btn" [disabled]="loginForm.invalid" (click)="submit()" >LOGIN</button>
+            </div>
+            <div class="no-acct">
+                <a routerLink="/signup" routerLinkActive="active" class="acct-btn">Sign-Up</a>
+            </div>
+        </form>
+    </div>
+</div>
