@@ -1,28 +1,36 @@
-<div class="container">
-    <div class="content">
-    <form action="" [formGroup]="loginForm">
-            <div class="heading">LOGIN</div>
-            <div class="username text">
-                <input type="text" formControlName="email" placeholder="E-MAIL" class="form-data" [(ngModel)]="username">
+<div class="container-fluid ">
+    <div class="row  bg-secondary  ">
+        <div class="col lg-6 md-6 sm-12 rounded">
+            <div class="content ">
+                <form action="" [formGroup]="loginForm">
+                    <h2 class="text-center">LOGIN</h2>
+                    <div class=" cont">
+                        <input type="text" class="form-control" placeholder="E-Mail" [(ngModel)]="username" formControlName="email">
+                    </div>
+
+                    <div class="password cont">
+                        <input [type]="changetype?'password':'text'" formControlName="passs" class="form-control"
+                            placeholder="Password" [(ngModel)]="password">
+                    </div>
+
+                    <div class="control w-100 d-flex">
+                        <div class="showpass w-50 cont">
+                            <input type="checkbox" name="" id="" [checked]="isChecked" (change)="toggle($event)"> Show
+                            Password
+                        </div>
+                        <div class="forgotpass w-50 text-right cont">
+                            <a href="#" class="text-dark">Forgot Password ?</a>
+                        </div>
+                    </div>
+                    <div class="warn">
+                        <p>{{warning}}</p>
+                    </div>
+                    <div class="button w-100 text-center">
+                        <button type="button" class="btn w-100 p-10 bg-light text-da " [disabled]="loginForm.invalid"
+                            (click)="submit()">Submit</button>
+                    </div>
+                </form>
             </div>
-            <div class="password text">
-                <input [type]="changetype?'password':'text'" formControlName="passs" name="pass" placeholder="PASSWORD"  class="form-data" [(ngModel)]="password" >
-            </div>
-            <p class="warn">{{warning}}</p>
-            <div class="pass">
-                <div class="shw-pass box">
-                    <input type="checkbox" [checked]="isChecked" (change)="toggle($event)"> Show Password
-                </div>
-                <div class="for-pass box">
-                    <a routerLink="/forgot">Forgot Password ?</a>
-                </div>
-            </div>            
-            <div class="login">
-                <button class="btn" [disabled]="loginForm.invalid" (click)="submit()" >LOGIN</button>
-            </div>
-            <div class="no-acct">
-                <a routerLink="/signup" routerLinkActive="active" class="acct-btn">Sign-Up</a>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
