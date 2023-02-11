@@ -43,10 +43,10 @@
     <div class="card-body">
       <h5 class="card-title">{{i.name}}</h5>
       <p class="card-text">{{i.description}}</p>
-      <p class="card-text">{{i.price | currency:"USD"}}</p>
+      <p class="card-text">{{i.price | currency:"INR"}}</p>
       <button class="btn btn-primary" (click)="addcart(i)">Add  to Cart</button>
     </div>
   </div>
   </div>
 
-  <app-add [products]="addcart(i)"></app-add>
+  <!-- <app-add [products]="selectedProduct"></app-add> -->

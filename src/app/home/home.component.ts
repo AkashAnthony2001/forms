@@ -13,8 +13,8 @@ export class HomeComponent implements OnInit{
   username:string=""
   password:string=""
   warning:string=""
-  user=["akash","gopi","gokul","siva"]
-  pass=["akash","gopi","gokul","siva"]
+  user=["akash@gmail.com","gopi@gmail.com","gokul@gmail.com","siva@gmail.com"]
+  pass=["akash123","gopi123","gokul123","siva123"]
 
   constructor(private route: Router) { }
 
