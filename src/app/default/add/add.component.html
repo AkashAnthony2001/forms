@@ -1,9 +1,9 @@
-<div class="card d-flex" style="width: 18rem;"  >
-    <img class="card-img-top" [src]='products.url' alt="Card image cap">
+<div class="card d-flex" style="width: 18rem;"  *ngFor="let i of cartitem">
+    <img class="card-img-top" [src]='i.url' alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">{{products.name}}</h5>
-      <p class="card-text">{{products.description}}</p>
-      <p class="card-text">{{products.price | currency:"USD"}}</p>
+      <h5 class="card-title">{{i.name}}</h5>
+      <p class="card-text">{{i.description}}</p>
+      <p class="card-text">{{i.price | currency:"USD"}}</p>
       <a href="#" class="btn btn-primary">Buy Now</a>
     </div>
   </div>

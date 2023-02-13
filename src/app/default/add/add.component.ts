@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AddcartService } from 'src/app/addcart.service';
 
 @Component({
   selector: 'app-add',
@@ -6,11 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-  @Input() products:any
+  cartitem:any[]=[]
 
-  constructor() { }
-
+  constructor( private cartservice:AddcartService) { }
   ngOnInit(): void {
+    this.cartitem=this.cartservice.fetchcart();
   }
 
 }
