@@ -54,8 +54,12 @@ export class AddcartService {
     return this.product;  
   }
 
-  fetchcart(){
-    return this.cart;
+  fetchcart(i:any){
+   return this.cart.push(i)
   }
   
+  showcart(){
+    return this.cart;
+  }
+
 }

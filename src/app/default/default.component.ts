@@ -21,8 +21,7 @@ products:any[]=[]
     this.route.navigateByUrl("add")
   }
   addcart(i:any){
-    this.selectedProduct = i ;
-    this.add.cart[i] = this.selectedProduct[i];
+    this.add.fetchcart(i)
     this.route.navigateByUrl("add");
   }
 }

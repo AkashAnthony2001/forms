@@ -9,9 +9,11 @@ import { AddcartService } from 'src/app/addcart.service';
 export class AddComponent implements OnInit {
   cartitem:any[]=[]
 
-  constructor( private cartservice:AddcartService) { }
+  constructor( private add:AddcartService) { 
+    this.cartitem=this.add.showcart();
+  }
   ngOnInit(): void {
-    this.cartitem=this.cartservice.fetchcart();
+    
   }
 
 }

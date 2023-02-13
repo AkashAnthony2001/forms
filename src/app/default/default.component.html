@@ -38,6 +38,7 @@
 
 
 <div class="row">
+  
   <div class="card " style="width: 18rem;" *ngFor="let i of products" >
     <img class="card-img-top" [src]='i.url' alt="Card image cap">
     <div class="card-body">
@@ -45,8 +46,6 @@
       <p class="card-text">{{i.description}}</p>
       <p class="card-text">{{i.price | currency:"INR"}}</p>
       <button class="btn btn-primary" (click)="addcart(i)">Add  to Cart</button>
-    </div>
-  </div>
-  </div>
+   
 
   <!-- <app-add [products]="selectedProduct"></app-add> -->
