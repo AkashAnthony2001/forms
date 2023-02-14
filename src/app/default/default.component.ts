@@ -17,9 +17,7 @@ products:any[]=[]
   
 
   
-  addtocart(){
-    this.route.navigateByUrl("add")
-  }
+  
   addcart(i:any){
     this.add.fetchcart(i)
     this.route.navigateByUrl("add");
