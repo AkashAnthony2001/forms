@@ -15,5 +15,8 @@ export class AddComponent implements OnInit {
   ngOnInit(): void {
     
   }
+  remcart(cartitem:any){
+    this.add.removecart(cartitem)
+  }
 
 }

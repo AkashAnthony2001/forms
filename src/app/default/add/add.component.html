@@ -8,8 +8,10 @@
       <h5 class="card-title">{{i.name}}</h5>
       <p class="card-text">{{i.description}}</p>
       <p class="card-text">{{i.price | currency:"INR"}}</p>
-      <button class="btn btn-primary">Buy Now</button>
-   
+      <div class="btn-cont">
+        <button class="btn btn-primary">Buy Now</button>
+        <button class="btn btn-primary m-1" (click)="remcart(i)">Remove item</button>
+      </div>
 </div>
 
 </div>

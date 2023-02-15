@@ -10,9 +10,20 @@
     <div class="card-body">
       <h5 class="card-title">{{i.name}}</h5>
       <p class="card-text">{{i.description}}</p>
-      <p class="card-text">{{i.price | currency:"INR"}}</p>
-      <button class="btn btn-primary" (click)="addcart(i)">Add  to Cart</button>
-   
+      <div class="cont d-flex w-100">
+      <div class="price w-50"><p class="card-text">{{i.price | currency:"INR"}}</p></div>
+      <div class="qty w-50">
+        <div class="buttons float-end">
+          <button class="btn bg-primary  quan-btn" (click)="dec(i.qty)" >-</button>
+          <span class="p-2">{{i.qty}}</span>
+          <button class="btn bg-primary quan-btn" (click)="inc(i.qty)">+</button>
+        </div>
+      </div>
+      </div>      
+      <button class="btn btn-primary m-1 " (click)="addcart(i)">Add  to Cart</button>
+      
+
+      
 </div>
 
 </div>

@@ -13,6 +13,7 @@ export class AddcartService {
     name:"Empty Can",
     url:"../assets/01.jpg",
     description:"A empty can with no label on it .",
+    qty:0,
     price:20
   },
   {
@@ -20,6 +21,7 @@ export class AddcartService {
     name:"Coke Can",
     url:"../assets/02.jpg",
     description:"A empty can with no label on it .",
+    qty:0,
     price:20
     
   },
@@ -28,6 +30,7 @@ export class AddcartService {
     name:"Coca Cola",
     url:"../assets/03.jpg",
     description:"A empty can with Coca Cola label on it .",
+    qty:0,
     price:20
 
   },
@@ -36,6 +39,7 @@ export class AddcartService {
     name:"Coke Tin",
     url:"../assets/04.jpg",
     description:"A empty can with Coke label on it .",
+    qty:0,
     price:20
 
   },
@@ -44,6 +48,7 @@ export class AddcartService {
     name:"Red Sipper",
     url:"../assets/05.jpg",
     description:"A empty sipper with no label on it .",
+    qty:0,
     price:20
 
   }];
@@ -62,4 +67,7 @@ export class AddcartService {
     return this.cart;
   }
 
+  removecart(cartitem : number){
+    this.cart.splice(cartitem,1)
+  }
 }
